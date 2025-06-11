@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-box {
+      background: rgba(244, 244, 244, 0.444);
+      padding: 40px 30px;
+      border: 1px solid #ccc;
+      width: 300px;
+      text-align: center;
+      border-bottom: 4px solid #3e3e3e3a;
+    }
+
+    .login-box h2 {
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .input-container {
+      display: flex;
+      margin-bottom: 15px;
+    }
+
+    .icon-box {
+      background-color: #e4e4e4;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ccc;
+      border-right: none;
+    }
+
+    .input-container input {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-left: none;
+      box-sizing: border-box;
+    }
+
+    .btn-login {
+      width: 100%;
+      background-color: #3897f0;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .remember {
+      text-align: left;
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+
+    .signup-outside {
+      margin-top: 15px;
+      font-size: 14px;
+
+      padding: 15px 30px;
+      width: 300px;
+      text-align: center;
+    }
+
+    .signup-outside a,
+    .remember a {
+      text-decoration: none;
+      color: #3897f0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h2>InstaLogin</h2>
+
+    <div class="input-container">
+      <div class="icon-box">
+        <i class="fas fa-user"></i>
+      </div>
+      <input type="text" id="username" placeholder="Username">
+    </div>
+
+    <div class="input-container">
+      <div class="icon-box">
+        <i class="fas fa-lock"></i>
+      </div>
+      <input type="password" id="password" placeholder="Password">
+    </div>
+
+    <button class="btn-login" onclick="login()">Log in</button>
+
+    <div class="remember">
+      <label><input type="checkbox" id="remember"> Remember me</label>
+      <a href="#">Forgot Password?</a>
+    </div>
+  </div>
+
+  <div class="signup-outside">
+    Don’t have an account? <a href="#">Sign up here</a>
+  </div>
+
+  <script>
+    function login() {
+      var user = document.getElementById("username").value;
+      var pass = document.getElementById("password").value;
+
+      if (user === "" || pass === "") {
+        alert("Please enter username and password.");
+      } else {
+        alert("Logged in as " + user);
+      }
+    }
+  </script>
+
+</body>
+</html>
